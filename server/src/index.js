@@ -12,6 +12,7 @@ const app = express();
 
 // Middleware
 app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors());
 app.use(express.json()); // Parse incoming JSON requests
 
 // Routes
@@ -34,3 +35,5 @@ const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+export default app;
